@@ -115,6 +115,8 @@ Distem.client do |cl|
       cl.vnode_execute(node['name'], "echo \"127.0.0.1 localhost\" >> /etc/hosts")
       puts "Connection to www allowed for #{node['name']}"
 
+      cl.vnode_execute(node['name'], "/etc/init.d/dummy start")
+
   }
   puts "==== Deployment finished ==="
 
